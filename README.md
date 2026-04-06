@@ -13,11 +13,11 @@ Financial markets are highly non-linear. The goal of this project is to build a 
 The model begins by analyzing the distribution of features and the correlation between global assets.
 
 ### Feature Distribution
-![Histograms](https://github.com/Cdharth-07/SP500-Stock-Movement-Prediction/blob/main/images/histograms.png?raw=true)
+![Histograms](https://github.com/Cdharth-07/SP500-Stock-Movement-Prediction/blob/main/Images/Histograms.png?raw=true)
 *Visualizing the spread of commodity prices and currency exchange rates.*
 
 ### Asset Correlation Matrix
-![Heatmap](https://github.com/Cdharth-07/SP500-Stock-Movement-Prediction/blob/main/images/heatmap.png?raw=true)
+![Heatmap](https://github.com/Cdharth-07/SP500-Stock-Movement-Prediction/blob/main/Images/Heatmap.png?raw=true)
 *Identifying how the US Dollar Index and Gold prices move in relation to the S&P 500.*
 
 ## 🛠️ Tech Stack & Methodology
