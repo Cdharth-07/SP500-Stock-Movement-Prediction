@@ -1,57 +1,38 @@
-# S&P 500 Movement Prediction Project 📈🤖
+# S&P 500 Stock Movement Prediction 📈🤖
 
 ## 👋 Introduction
-
-This repository contains the **S&P 500 Movement Prediction Project**, an Applied Machine Learning application designed to analyze historical financial data and forecast market trends. By integrating exploratory data analysis (EDA) with predictive machine learning algorithms, it provides a robust digital framework for understanding and predicting stock market behavior.
+This project is an **Applied Machine Learning** application designed to predict the daily price movement direction of the S&P 500 Index. By analyzing the interdependencies between the stock market and other global assets—such as Crude Oil, Gold, and major Forex pairs (EUR, GBP, CNY, JPY)—the model identifies patterns that signal whether the market will close higher or lower than the previous day.
 
 ## 🎯 Objective
+Financial markets are highly non-linear. The goal of this project is to build a robust data pipeline that:
+* Integrates multiple macro-economic datasets.
+* Engineers momentum and volatility features (RSI, SMA).
+* Utilizes classification algorithms to predict daily "Binary Movement" (Up/Down).
 
-The goal of this project is to provide a data-driven approach to forecasting market directions and simplifying complex financial data. It answers key needs such as:
+## 📊 Exploratory Data Analysis
+The model begins by analyzing the distribution of features and the correlation between global assets.
 
-* Will the S&P 500 index close higher or lower on a given day?
-* What underlying patterns exist in historical price and volume data?
-* How can engineered financial features (like moving averages) improve prediction accuracy?
-* How can we build a model that minimizes false positives when predicting upward trends?
+### Feature Distribution
+![Histograms](https://github.com/Cdharth-07/SP500-Stock-Movement-Prediction/blob/main/images/histograms.png?raw=true)
+*Visualizing the spread of commodity prices and currency exchange rates.*
 
-## 📸 Application Overview
+### Asset Correlation Matrix
+![Heatmap](https://github.com/Cdharth-07/SP500-Stock-Movement-Prediction/blob/main/images/heatmap.png?raw=true)
+*Identifying how the US Dollar Index and Gold prices move in relation to the S&P 500.*
 
-### Exploratory Data Analysis & Visualization
-The foundation of the project involves cleaning raw financial time-series data and visualizing historical trends, ensuring you never miss a hidden market signal or volatility spike.
+## 🛠️ Tech Stack & Methodology
+* **Language:** Python
+* **Libraries:** Pandas (Data Cleaning), Scikit-Learn (Machine Learning), Matplotlib/Seaborn (Visualization).
+* **Feature Engineering:** Relative Strength Index (RSI), Simple Moving Averages (SMA), and Asset Ratios.
+* **Model:** Logistic Regression with Standardized Scaling.
 
-### Predictive Machine Learning Engine
-The core of the project features a trained classification model (e.g., Random Forest) that evaluates historical indicators to predict binary market movements (Up/Down) with optimized precision.
-
-## 🛠️ Tools & Technologies Used
-
-* **Environment & Deployment:** Jupyter Notebook
-* **Machine Learning:** Scikit-Learn (`sklearn`)
-* **Programming Language:** Python (using Pandas, NumPy, and structured data handling)
-* **Data Visualization:** Matplotlib, Seaborn
-* **Version Control:** Git & GitHub
+## 🏆 Results
+The model achieved a **Test Accuracy of 56.53%**, successfully outperforming a baseline random walk (50%). This indicates that the engineered features from global commodities and forex markets provide predictive value for stock index movements.
 
 ## 📂 Project Structure
-
-* **`notebooks/`**: Core logic for data exploration, feature engineering, and model training.
-* **`data/`**: A curated folder containing historical S&P 500 datasets used for training and testing.
-* **`models/`**: Scripts and logic for evaluating machine learning classifiers and accuracy metrics.
-* **`visualizations/`**: Generated plots and charts tracking market performance.
-
-## ✨ Key Features & Functionality
-
-* **⚙️ Robust Backend Pipeline:** Developed using Python with a focus on clean data engineering, utilizing Pandas for missing value handling and time-series formatting.
-* **🧮 Smart Feature Engineering:** Uses financial logic to create custom rolling averages, momentum indicators, and trend signals rather than relying on raw data alone.
-* **📊 Integrated Predictive Analytics:** Includes a trained classifier to provide grounded, data-backed predictions on future market directions.
-* **🗺️ Historical Awareness:** Backtests models against strict chronological data splits to ensure validity and prevent data leakage.
-* **🔢 Real-world Metric Tracking:** Focuses on precision scores and confusion matrices to critically evaluate performance, rather than just basic accuracy.
-* **🎨 Visual Data Storytelling:** Clean, insightful charts that plot closing prices against moving averages for ease of use and analysis.
-
-## 🚀 Future Roadmap: Deep Learning Integration
-
-I am currently working on implementing **Long Short-Term Memory (LSTM) networks**. This upgrade will allow the model to move beyond traditional classifiers and "read" the sequential, time-based nature of the stock market to provide hyper-accurate, sequence-verified market predictions.
-
-## 🏁 Conclusion
-
-This project demonstrates the practical application of Machine Learning in solving real-world financial forecasting challenges. By combining rigorous data engineering with predictive algorithms, it creates a high-utility analytical platform that empowers users to explore market data with confidence.
+* `Final.py`: The main execution script containing the data pipeline and ML logic.
+* `Datasets/`: Historical CSV data for the S&P 500 and correlated assets.
+* `images/`: Visualizations generated during the EDA phase.
 
 ---
 Developed by [Sidharth Singh](https://github.com/Cdharth-07)
